@@ -323,7 +323,11 @@ public partial class PopupService
         public override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetStyle(DialogFragment.StyleNormal, Resource.Style.Maui_MainTheme_NoActionBar);
+#if NET10_0
+            SetStyle(DialogFragment.StyleNormal, Microsoft.Maui.Resource.Style.Maui_MainTheme_NoActionBar);
+#else
+            SetStyle(DialogFragment.StyleNoTitle, Resource.Style.Maui_MainTheme_NoActionBar);
+#endif
         }
 
         public class PopupComponentDialog : ComponentDialog
