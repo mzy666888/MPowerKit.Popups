@@ -27,6 +27,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<PackageIcon>icon.png</PackageIcon>
+		<BaseOutputPath>..\..\bin</BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
